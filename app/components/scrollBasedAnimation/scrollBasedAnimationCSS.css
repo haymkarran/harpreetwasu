@@ -1,0 +1,182 @@
+/* :root {
+    --pink: hsl(338, 70%, 55%);
+    --teal: hsl(183, 70%, 62%);
+    --white: hsl(334, 7%, 95%);
+  } */
+  
+  /* body {
+    background: hsl(224, 32%, 12%);
+    background-image: conic-gradient(
+      from 0deg at 50% 50%,
+      blue,
+      purple,
+      purple,
+      blue
+    );
+    background-blend-mode: multiply;
+    min-block-size: 100dvh;
+    display: grid;
+    place-items: center;
+  } */
+  
+  .scroll-animate-container {
+    color: rgb(var(--foreground-color));
+    /* background: hsl(222, 45%, 7%); */
+    /* background: rgb(10, 15, 26); */
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(5000px) rotateY(var(--rotateX)) rotateX(var(--rotateY));
+  }
+  
+  .scroll-animate-container > * {
+    text-shadow: 0 0 0.2em currentColor;
+  }
+  
+  .scroll-animate-container::before,
+  .scroll-animate-container::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+  }
+  
+  /* shadow */
+  .scroll-animate-container::before {
+    /* inset: 0.75rem; */
+    border-radius: inherit;
+    /* background: black; */
+    background: url(../../../public//assets//images/hero-image.png);
+    z-index: -1;
+    transform: translateZ(-50px);
+    /* filter: blur(15px);
+    opacity: 0.5; */
+  }
+  
+  /* gradient thingy */
+  .scroll-animate-container::after {
+    z-index: -2;
+    inset: -1rem;
+    /* background: var(--btn-gradient); */
+    background: url(../../../public//assets/images/harpreet-about.png);
+    background-size: cover;
+    transform: translateZ(-50px);
+  }
+  
+  .selector, .property, .punctuation, .property + .punctuation {
+    color: rgb(var(--foreground-color));
+  }
+  
+  
+  .css-only .scroll-animate-container {
+    transition: transform 200ms ease-in-out;
+  }
+  
+  .css-only .scroll-animate-container > div {
+    z-index: 10;
+    outline: none;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(7) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(8) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(9) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    inset: 0;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(1):hover ~ .scroll-animate-container {
+    --rotateX: -25deg;
+    --rotateY: 25deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(2):hover ~ .scroll-animate-container {
+    --rotateX: 0deg;
+    --rotateY: 25deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(3):hover ~ .scroll-animate-container {
+    --rotateX: 25deg;
+    --rotateY: 25deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(4):hover ~ .scroll-animate-container {
+    --rotateX: -25deg;
+    --rotateY: 0deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(5):hover ~ .scroll-animate-container {
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(6):hover ~ .scroll-animate-container {
+    --rotateX: 25deg;
+    --rotateY: 0deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(7):hover ~ .scroll-animate-container {
+    --rotateX: -25deg;
+    --rotateY: -25deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(8):hover ~ .scroll-animate-container {
+    --rotateX: 0deg;
+    --rotateY: -25deg;
+  }
+  
+  .css-only .scroll-animate-container > div:nth-child(9):hover ~ .scroll-animate-container {
+    --rotateX: 25deg;
+    --rotateY: -25deg;
+  }
+  
+  /* .yt {
+    position: fixed;
+    bottom: 1.5rem;
+    color: #bcbcbc;
+  } */
+  

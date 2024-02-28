@@ -1,0 +1,93 @@
+.grid-item-button {
+    padding: 20px 10px;
+    background-color: rgb(var(--btn-bg-color));
+    width: 250px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.feature-cards div:nth-child(1) {
+    padding: 0px;
+}
+
+.grid-data-heading {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.feature-cards div:nth-child(1) {
+    background: transparent;
+    overflow: visible;
+    box-shadow: none;
+}
+
+.feature-cards div:nth-child(1) p {
+    position: sticky;
+    top: 50px;
+    z-index: 1;
+    font-size: 60px;
+    font-weight: 800;
+    background-image: var(--grid-section-heading-gradient);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    animation-direction: reverse;
+    display: inline-block;
+    padding-top: 50px;
+}
+
+@media only screen and  (min-width: 1025px) {
+    .feature-cards div:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 7;
+        grid-row: 1 / span 7;
+    }
+
+    .grid-parent-container-span-3 {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+.desktops {
+    width: 100%;
+    max-width: 1180px !important;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+@keyframes textclip {
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@media only screen and (min-width: 735px) and (max-width: 1024px){
+    .grid-parent-container, .grid-parent-container-experiences, .grid-parent-container-logos, .grid-parent-container-left-right, .horizontal-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 734px)
+{
+        .grid-parent-container-experiences-hor-scroll {
+        overflow-x: auto;
+        grid-auto-flow: column;
+        grid-auto-columns: 290px;
+        -ms-grid-columns: minmax(260px, 1fr);
+        grid-template-columns: minmax(260px, 1fr);
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: start;
+    }
+    .hor-sectional-padding {
+        padding: 20px;
+    }
+    .big-text {
+        font-size: 52px !important;
+    }
+}

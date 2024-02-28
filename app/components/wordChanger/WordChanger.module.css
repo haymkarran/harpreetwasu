@@ -1,0 +1,21 @@
+.blinker {
+    animation: blink-caret 0.5s step-end infinite;
+    background-color: red;
+    color: red;
+    font-weight: normal !important;
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      background-color: transparent;
+    }
+    50% {
+      background-color: red;
+    }
+  }  
+  
+.mark {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
+}

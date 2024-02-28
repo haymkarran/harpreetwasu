@@ -1,0 +1,274 @@
+.harpreetWritings .gridChild {
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.harpreetWritings .cloudComputing .gridChild {
+    /* background-color: #E7F5FF; */
+    background-color: rgb(var(--blogs-cloudComputing));
+}
+
+.harpreetWritings .microsoft365 .gridChild {
+    /* background-color: #E7F5FF; */
+    background-color: rgb(var(--blogs-microsoft365));
+}
+
+.harpreetWritings .cyberSecurity .gridChild {
+    /* background-color: #E7F5FF; */
+    background-color: rgb(var(--blogs-cyberSecurity));
+}
+
+.harpreetWritings .migrations .gridChild {
+    /* background-color: #E7F5FF; */
+    background-color: rgb(var(--blogs-migrations));
+}
+
+.newsletterForm button {
+    border-radius: 10px !important;
+    width: -webkit-fill-available !important;
+}
+
+.newsletterSection, .testimonialColor {
+    background-color: rgb(var(--newsletterSection));
+}
+
+.harpreetNewsletters h3 {
+    font-family: 'Chomsky', sans-serif;
+    font-size: 80px;
+}
+
+.newsletterForm button, .formInputCss {
+    border-radius: 10px !important;
+}
+
+.podcastsHarpreetTitle {
+    font-size:200px;
+    
+}
+
+.certificationBadge:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgb(var(--background-rgb));
+    opacity: 0.4;
+    	-webkit-transition: none;
+    	   -moz-transition: none;
+    	        transition: none;
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+
+.certificationBadge:hover:after {
+    left: 110%;
+    visibility: visible;
+    background-color: rgb(var(--background-rgb));
+    opacity: 0;
+    -webkit-transition: all 0.6s ease-in-out;
+	   -moz-transition: all 0.6s ease-in-out;
+	        transition: all 0.6s ease-in-out;
+}
+
+.certifiedProfessionalSection {
+    position: relative;
+
+}
+
+.certifiedPatternContainerTop img {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    z-index: 1000;
+}
+
+.certifiedPatternContainerBottom img {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    z-index: 1000;
+}
+
+.sectionBackgroundCP {
+    transform-origin: 100% 0;
+    transform: skewY(-6deg);
+    background-color: rgb(var(--backgroundCertificationSection));
+}
+
+.sectionClientele {
+    transform: skewY(-6deg);
+}
+
+.harpreetCollab .asset img, .testimonialPeopleGroup .asset img {
+    width: max-content;
+}
+
+.testimonialPeopleGroup .asset img {
+   scale: 0.6;
+}
+
+.harpreetCollab .asset, .testimonialPeopleGroup .asset {
+    margin: 0 auto;
+}
+
+.textSmall {
+    font-size: 18px;
+}
+
+.patternPosition {
+    position: absolute;
+    left: 30px;
+    bottom: -40px;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    opacity: 0.1;
+}
+
+@keyframes oscillate {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-8deg);
+    }
+  }
+  
+  .testimonialChild .patternPosition img {
+    animation: oscillate 2s linear infinite;
+  }
+  
+  .testimonialChild {
+    border-radius: 40px;
+    min-width: 300px;
+    width: 600px;
+    max-width: 600px;
+  }
+
+  .testimonialContainer {
+    overflow-x: auto;
+    grid-auto-flow: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+
+  .sectionHarpreetAvailability {
+    cursor: pointer;
+  }
+
+  .testimonialTextData .asset img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonialTextData p {
+    background-color: rgb(var(--blogs-cloudComputing));
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .hireHarpreetFocusAsset .asset img {
+    scale: 1.21;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .footer-footnotes p {
+    font-size: 20px !important;
+  }
+
+
+.gradientLineSeparator {
+  border: 1px solid;
+  border-image: var(--btn-gradient);
+  border-image-slice: 1;
+}
+
+.h1Hero {
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.feelSpecial {
+  animation: textlefttoright 2s linear infinite;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-origin: content-box;
+  height: 150px;
+  width: 90px;
+  background-repeat: no-repeat;
+  background-image: url(https://lollypop.design/wp-content/uploads/2023/06/Component-1desktop.svg);
+  transform: rotate(45.93deg);
+  -webkit-text-fill-color: transparent;
+  transition-timing-function: ease-out;
+}
+
+@keyframes textlefttoright {
+  0% {
+      background-position: -100% 100%;
+  }
+  
+  100% {
+      background-position: 800% 0;
+  }
+}
+
+.textGradient::after {
+  content: '';
+    position: absolute;
+    background: var(--text-gradient);
+    filter: blur(150px);
+    height: 500px;
+    max-width: 500px;
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+    right: 0;
+}
+
+.textGradientBefore::after {
+  content: '';
+    position: absolute;
+    background: var(--text-gradient);
+    filter: blur(150px);
+    height: 500px;
+    max-width: 500px;
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+    left: 0;
+}
+
+.bannerHome::before {
+  background: var(--text-gradient);
+    filter: blur(215px);
+    width: 65%;
+    height: 70%;
+    background-size: cover;
+    content: " ";
+    position: absolute;
+    top: 0px;
+    transform: translate(50%, 50%);
+    top: -50%;
+    right: 50%;
+    z-index: -1;
+    -webkit-filter: blur(215px);
+    -moz-filter: blur(215px);
+    -ms-filter: blur(215px);
+    -o-filter: blur(215px);
+}
+
+.banner {
+    background-image: url(https://lollypop.design/wp-content/uploads/2023/06/grid-lines.svg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}

@@ -1,0 +1,152 @@
+import editIcon from "../../../public/assets/icons/edit.svg"
+import phoneIcon from "../../../public/assets/icons/phone.svg"
+import emailIcon from "../../../public/assets/icons/email.svg"
+import locationIcon from "../../../public/assets/icons/location.svg"
+import mediumLogo from "../../../public/assets/logos/medium-white.svg"
+
+const ContactMenuApi = [
+    {
+        "id": 1,
+        "CatagoryTitle": "Write To Harpreet",
+        "heroImageSrc": "",
+        "heroContentLink": "",
+        "Contents": [
+            { 
+                "id": 1, 
+                "imageSrc": editIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "icon", 
+                "titleText": "Hire Harpreet",
+                "subText": "Have a project? Let me know quickly.",
+                "contentLink": "",
+            },
+            { 
+                "id": 2, 
+                "imageSrc": editIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "icon", 
+                "titleText": "Work with Harpreet",
+                "subText": "Looking for career growth? Tell me about your interests and strengths.",
+                "contentLink": "",
+            },
+            { 
+                "id": 3, 
+                "imageSrc": editIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "icon", 
+                "titleText": "Collaborate with Harpreet",
+                "subText": "Thinking of collaborations? Tell me more about it.",
+                "contentLink": "",
+            },
+            { 
+                "id": 4, 
+                "imageSrc": editIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "icon", 
+                "titleText": "Partner with Harpreet",
+                "subText": "Looking for meaningful partnerships? Let's discuss.",
+                "contentLink": "",
+            },
+        ],
+    },
+    {
+        "id": 2,
+        "CatagoryTitle": "Contact Harpreet",
+        "heroImageSrc": "",
+        "heroContentLink": "",
+        "Contents": [
+            { 
+                "id": 1, 
+                "imageSrc": phoneIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "", 
+                "titleText": "Call Harpreet",
+                "subText": "+971-52-718-8085",
+                "contentLink": "tel:+971527188085",
+            },
+            { 
+                "id": 2, 
+                "imageSrc": emailIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "", 
+                "titleText": "Email Harpreet",
+                "subText": "Harpreet@syncexperts.com",
+                "contentLink": "mailto:Harpreet@syncexperts.com",
+            },
+            { 
+                "id": 3, 
+                "imageSrc": locationIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "", 
+                "titleText": "India Address",
+                "subText": "9:00 AM IST - 6:00 PM IST. Monday - Friday.",
+                "contentLink": "https://maps.app.goo.gl/uC4HA1cjBPsnwyCw8",
+            },
+            { 
+                "id": 4, 
+                "imageSrc": locationIcon.src,
+                "videoSrcImage": "",
+                "imageAlt": "", 
+                "titleText": "Dubai Address",
+                "subText": "9:00 AM UAE - 6:00 PM UAE. Monday - Friday.",
+                "contentLink": "https://maps.app.goo.gl/K7CDwyujsvmkNWS96",
+            },
+        ],
+    },
+    {
+        "id": 3,
+        "CatagoryTitle": "Connect With Harpreet",
+        "Pulse": " ",
+        "heroImageSrc": "",
+        "heroContentLink": "",
+        "Contents": [
+            { 
+                "id": 1, 
+                "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Upwork_Logo.svg",
+                "videoSrcImage": "",
+                "imageAlt": "Upwork", 
+                "titleText": "",
+                "subText": "",
+                "contentLink": "https://www.upwork.com/freelancers/harpreetsinghwasu",
+            },
+            { 
+                "id": 2, 
+                "imageSrc": mediumLogo.src,
+                "videoSrcImage": "",
+                "imageAlt": "Medium", 
+                "titleText": "",
+                "subText": "",
+                "contentLink": "",
+            },
+            { 
+                "id": 3, 
+                "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg",
+                "videoSrcImage": "",
+                "imageAlt": "Linkedin", 
+                "titleText": "",
+                "subText": "",
+                "contentLink": "https://www.linkedin.com/in/harpreet-wasu-9196a5b2/",
+            },
+            { 
+                "id": 4, 
+                "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
+                "videoSrcImage": "",
+                "imageAlt": "Instagram", 
+                "titleText": "",
+                "subText": "",
+                "contentLink": "https://www.instagram.com/harpreetwasu_/",
+            },
+            { 
+                "id": 5, 
+                "imageSrc": "https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg",
+                "videoSrcImage": "",
+                "imageAlt": "Facebook", 
+                "titleText": "",
+                "subText": "",
+                "contentLink": "https://www.facebook.com/Raunak.wasu",
+            },
+        ],
+    },
+];
+
+export default ContactMenuApi; 

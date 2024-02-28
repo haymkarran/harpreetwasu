@@ -1,0 +1,102 @@
+.clientele-carousal-parent-container {
+    overflow-x: auto;
+    align-items: flex-start;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline: auto;
+}
+
+.clientele-horizontal-track {
+    overflow: visible;
+    overflow-x: visible;
+    align-items: flex-start;
+    display: flex;
+    gap: 80px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.clientele-carousal-parent-container .Backwards {
+    animation: sliding-testimonial-backwards 40s linear infinite;
+}
+
+.clientele-carousal-parent-container .BackwardsSlow {
+    animation: sliding-testimonial-backwards 120s linear infinite;
+}
+
+.clientele-carousal-parent-container .Forwards {
+    animation: sliding-testimonial-forwards 60s linear infinite;
+}
+
+.clientele-heading {
+    font-size: 24px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.clientele-image-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.clientele-image {
+    max-height: 50px;
+    object-fit: contain;
+}
+
+/* .clientele-scroller-item-data-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+} */
+
+.clientele-item-data-container:hover {
+    transform: initial !important;
+    transition: all ease-in-out 0.2s;
+    scale: 1.1;
+}
+
+.clientele-item-data-container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+    	-webkit-transition: none;
+    	   -moz-transition: none;
+    	        transition: none;
+    filter: blur(50px);
+    -webkit-filter: blur(50px);
+}
+
+.clientele-item-data-container:hover:after {
+    left: 110%;
+    background-color: rgba(255,255,255,0);
+    -webkit-transition: all 0.6s ease-in-out;
+	   -moz-transition: all 0.6s ease-in-out;
+	        transition: all 0.6s ease-in-out;
+}
+
+@keyframes sliding-testimonial-backwards {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1500px, 0, 0); /* The image width */
+    }
+  }
+
+  @keyframes sliding-testimonial-forwards {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(1500px, 0, 0); /* The image width */
+    }
+  }
