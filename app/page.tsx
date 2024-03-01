@@ -310,8 +310,7 @@ export default function Home() {
             />
             <div>
             <form>
-                <label className="block">
-                  {/* <span className="block text-sm font-medium text-slate-700">Username</span> */}
+                <label className="block"></label>
                   <input type="email" name="email" id="email" 
                         className="formInputCss px-3 py-5 bgColorGlobal textColorGlobal
                                   shadow-sm placeholder-slate-400 
@@ -322,7 +321,6 @@ export default function Home() {
                                   invalid:text-pink-600 focus:invalid:border-pink-500 
                                   focus:invalid:ring-pink-500 disabled:shadow-none"
                                   placeholder="you@example.com" />
-                </label>
               </form>
                 <GridChild childId={16}
                 childName="newsletterForm text-center"
