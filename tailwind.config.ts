@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  important: true,
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,6 +14,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'gradient-linear-light': 'linear-gradient(196.35deg, #f9f9f9 16.7%, #fdfdfd 82.55%)',
+          'gradient-linear-dark': 'linear-gradient(196.35deg, #5B062A 16.7%, #1B023A 82.55%)',
       },
       gap: {
         '3.6': '0.938rem',
@@ -56,6 +60,83 @@ const config: Config = {
       'max1600px' : {'max' : '1600px'},
     },
     important: true,
+    colors: {
+      foreground: {
+        DEFAULT: 'rgb(0, 0, 0)',
+        dark: 'rgb(255, 255, 255)',
+      },
+      background: {
+        DEFAULT: 'rgb(255, 255, 255)',
+        dark: 'rgb(0, 0, 0)',
+      },
+      grid: {
+        bg: {
+          DEFAULT: 'rgb(255, 255, 255)',
+          dark: 'rgb(36, 36, 38)',
+        },
+        cardHoverColor: {
+          DEFAULT: 'rgb(251, 242, 220)',
+          dark: 'rgb(46, 44, 32)',
+        },
+        cardBoxShadow: '0 0 15px -5px rgba(0, 0, 0, 0.1)',
+        sectionHeadingGradient: {
+          DEFAULT: 'linear-gradient(-225deg, #c69e00 0%, #fff93e 29%, #ffd013 67%, #cdc601 100%)',
+          dark: 'linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%)',
+        },
+      },
+      btnBgColor: {
+        DEFAULT: 'rgb(245, 245, 180)',
+        dark: 'rgb(0, 0, 0)',
+      },
+      menuNavBoxShadow: {
+        DEFAULT: '-2px 2px 70px -25px rgba(0, 0, 0, 0.3)',
+        dark: '-2px 2px 70px -25px rgba(255, 255, 255, 0.3)',
+      },
+      btnGradient: {
+        DEFAULT: 'linear-gradient(90deg, #B100C0 0%, #0048D3 100%)',
+      },
+      mobileMenuBg: {
+        DEFAULT: 'rgb(239, 239, 239)',
+        dark: 'rgb(18, 18, 18)',
+      },
+      filterValue: {
+        DEFAULT: 'brightness(0) invert(0)',
+        dark: 'brightness(0) invert(1)',
+      },
+      neutralWhite: {
+        DEFAULT: 'rgb(255, 255, 255)',
+      },
+      navItemHoverBg: {
+        DEFAULT: 'rgb(236, 241, 246)',
+        dark: 'rgb(6, 14, 25)',
+      },
+      blogs: {
+        cloudComputing: {
+          DEFAULT: 'rgb(231, 245, 255)',
+          dark: 'rgb(27, 34, 40)',
+        },
+        microsoft365: {
+          DEFAULT: 'rgb(250, 255, 234)',
+          dark: 'rgb(56, 59, 41)',
+        },
+        cyberSecurity: {
+          DEFAULT: 'rgb(251, 241, 255)',
+          dark: 'rgb(33, 13, 41)',
+        },
+        migrations: {
+          DEFAULT: 'rgb(239, 255, 253)',
+          dark: 'rgb(23, 42, 40)',
+        },
+      },
+      newsletterSection: {
+        DEFAULT: 'rgb(251, 241, 255)',
+        dark: 'rgb(33, 13, 41)',
+      },
+      backgroundCertificationSection: {
+        DEFAULT: 'rgb(206, 255, 249)',
+        dark: 'rgb(3, 27, 25)',
+      },
+    },
   },
   plugins: [],
 }

@@ -490,18 +490,21 @@ const GridChildApi = [
                 "videoContainerLink": "",
             },
         ],
-        "Button": [
-            {
-                "id": 1,
-                "buttonText": "Hire Harpreet",
-                "buttonLink": "",
-            }
-        ],
         "headingH4" : [
             {
                 "id": 1,
                 "headingText": "About",
                 "headingLink": "",
+            }
+        ],
+    },
+    {
+        "id": 41,
+        "Button": [
+            {
+                "id": 1,
+                "buttonText": "Hire Harpreet",
+                "buttonLink": "",
             }
         ],
     },

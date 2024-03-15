@@ -192,8 +192,8 @@ const TopNav: React.FC<Props> = () => {
                     </div>
                     <div className="header-item item-center">
                         <div className="menu-overlay" onClick={toggleMenu}></div>
-                        <nav className="menu max1279px:bg-background max1279px:dark:!bg-foreground" onClick ={clickedMenuMain}>
-                            <div className="mobile-menu-head max1279px:bg-background max1279px:dark:!bg-foreground">
+                        <nav className="menu" onClick ={clickedMenuMain}>
+                            <div className="mobile-menu-head">
                             <div className="go-back" onClick={hideSubMenu}>
                                 <span className="bold">←</span>
                             </div>

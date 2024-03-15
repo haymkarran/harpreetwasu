@@ -3,34 +3,34 @@
     border-radius: 20px;
 }
 
-.harpreetWritings .cloudComputing .gridChild {
-    /* background-color: #E7F5FF; */
+/* .harpreetWritings .cloudComputing .gridChild {
+    /* background-color: #E7F5FF;
     background-color: rgb(var(--blogs-cloudComputing));
-}
+} */
 
-.harpreetWritings .microsoft365 .gridChild {
-    /* background-color: #E7F5FF; */
+/* .harpreetWritings .microsoft365 .gridChild {
+    /* background-color: #E7F5FF;
     background-color: rgb(var(--blogs-microsoft365));
 }
 
 .harpreetWritings .cyberSecurity .gridChild {
-    /* background-color: #E7F5FF; */
+    /* background-color: #E7F5FF;
     background-color: rgb(var(--blogs-cyberSecurity));
 }
 
 .harpreetWritings .migrations .gridChild {
-    /* background-color: #E7F5FF; */
+    /* background-color: #E7F5FF;
     background-color: rgb(var(--blogs-migrations));
-}
+} */
 
 .newsletterForm button {
     border-radius: 10px !important;
     width: -webkit-fill-available !important;
 }
 
-.newsletterSection, .testimonialColor {
+/* .newsletterSection, .testimonialColor {
     background-color: rgb(var(--newsletterSection));
-}
+} */
 
 .harpreetNewsletters h3 {
     font-family: 'Chomsky', sans-serif;
@@ -95,7 +95,6 @@
 .sectionBackgroundCP {
     transform-origin: 100% 0;
     transform: skewY(-6deg);
-    background-color: rgb(var(--backgroundCertificationSection));
 }
 
 .sectionClientele {
@@ -155,18 +154,16 @@
     -ms-flex-align: start;
     align-items: start;
   }
-
   .sectionHarpreetAvailability {
     cursor: pointer;
   }
 
   .testimonialTextData .asset img {
-    width: 70px;
-    height: 70px;
+    width: 70px !important;
+    height: 70px !important;
   }
 
-  .testimonialTextData p {
-    background-color: rgb(var(--blogs-cloudComputing));
+  .testimonialTextData {
     padding: 30px;
     border-radius: 20px;
   }
@@ -189,28 +186,6 @@
   border-image-slice: 1;
 }
 
-.h1Hero {
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.feelSpecial {
-  animation: textlefttoright 2s linear infinite;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-origin: content-box;
-  height: 150px;
-  width: 90px;
-  background-repeat: no-repeat;
-  background-image: url(https://lollypop.design/wp-content/uploads/2023/06/Component-1desktop.svg);
-  transform: rotate(45.93deg);
-  -webkit-text-fill-color: transparent;
-  transition-timing-function: ease-out;
-}
-
 @keyframes textlefttoright {
   0% {
       background-position: -100% 100%;
@@ -224,7 +199,6 @@
 .textGradient::after {
   content: '';
     position: absolute;
-    background: var(--text-gradient);
     filter: blur(150px);
     height: 500px;
     max-width: 500px;
@@ -237,7 +211,6 @@
 .textGradientBefore::after {
   content: '';
     position: absolute;
-    background: var(--text-gradient);
     filter: blur(150px);
     height: 500px;
     max-width: 500px;
@@ -248,7 +221,6 @@
 }
 
 .bannerHome::before {
-  background: var(--text-gradient);
     filter: blur(215px);
     width: 65%;
     height: 70%;
@@ -271,4 +243,8 @@
     width: 100%;
     height: 100%;
     background-size: cover;
+}
+
+.privacy-legal-tc {
+  flex-direction: row !important;
 }

@@ -1,0 +1,11 @@
+.mediumBlogContent p {
+    padding: 20px 0;
+    line-height: 32px;
+}
+
+.mediumBlogContent img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    margin: 20px 0;
+}

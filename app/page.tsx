@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import Testimonials from './components/testimonials/Testimonials'
 import TopNav from './components/top-nav/TopNav'
@@ -16,18 +17,20 @@ import leafPattern from "../public/assets/patterns/leaf.svg"
 import wheelPattern from "../public/assets/patterns/wheel.svg"
 import heartImage from "../public/assets/icons/heart.svg"
 import WordChanger from './components/wordChanger/WordChanger'
+import { useTheme } from 'next-themes';
 // import Stack from './components/cardStack/Stack'
 
 // import ThemeToggler from './components/themeToggler/ThemeToggler'
 
 export default function Home() {
+    const { theme } = useTheme();
   return (
     <>
     {/* Your Trusted Migration Expert */}
-    <section className='m-auto w-full max-parent-grid-container-width pt-28 pb-60 bannerHome banner'>
+    <section className='m-auto w-full max-parent-grid-container-width pt-28 pb-60 bannerHome banner before:!bg-gradient-linear-light before:dark:!bg-gradient-linear-dark'>
         <GridContainer gridCols="grid-cols-2 max709px:grid-cols-1">
             <div className='flex flex-col justify-center w-full'>
-                <h1 className='min1280px:text-h1 max1279px:text-h2 max554px:text-h4 font-bold relative'>Your Trusted <br /><WordChanger /><br /> <span className='h1Hero'><span className='feelSpecial textGradient'>Expert.</span></span></h1>
+                <h1 className='min1280px:text-h1 max1279px:text-h2 max554px:text-h4 font-black relative'>Your Trusted <br /><WordChanger /><br />Expert.</h1>
             </div>
             <div className='w-11/12 h-full'><ScrollAnimate /></div>
         </GridContainer>
@@ -57,14 +60,14 @@ export default function Home() {
     <section className='animate-pulse m-auto w-full max-parent-grid-container-width min1280px:-mb-50 max1279px:mb-20'>
         <GridContainer gridCols="grid-cols-1">
             <GridChild childId={3} 
-                childName="starStuds"
+                childName="invert-0 brightness-0 dark:invert"
             />
         </GridContainer>
     </section>
 
     {/* Hello. I'm Harpreet */}
     <section className='m-auto max-parent-grid-container-width pb-60 relative'>
-        <GridContainer gridCols="grid-cols-2 max709px:grid-cols-1 textGradientBefore">
+        <GridContainer gridCols="grid-cols-2 max709px:grid-cols-1 textGradientBefore after:!bg-gradient-linear-light after:dark:!bg-gradient-linear-dark">
             <GridChild childId={4} 
                 childName="aboutHarpreet"
                 customHeaderCss='font-bold'
@@ -79,7 +82,7 @@ export default function Home() {
 
     {/* what can I do for you */}
     <section className='m-auto max-parent-grid-container-width pb-60 relative'>
-        <GridContainer gridCols="grid-cols-2 max709px:grid-cols-1 textGradient">
+        <GridContainer gridCols="grid-cols-2 max709px:grid-cols-1 textGradient after:!bg-gradient-linear-light after:dark:!bg-gradient-linear-dark">
             <div className='relative max709px:mb-60 min710px:pr-10'><Stack /></div>
             <GridChild childId={7}
                 childName="whatCanIDoForYou"
@@ -94,7 +97,7 @@ export default function Home() {
     <section className='animate-pulse m-auto w-full max-parent-grid-container-width min1280px:-mb-50 max1279px:mb-20 mt-20'>
         <GridContainer gridCols="grid-cols-1">
             <GridChild childId={3} 
-                childName="starStuds"
+                childName="invert-0 brightness-0 dark:invert"
             />
         </GridContainer>
     </section>
@@ -112,7 +115,7 @@ export default function Home() {
     </section>
 
     <section className='testimonialContainer grid'>
-        <div className='testimonialChild !ml-10 relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10'>
+        <div className='testimonialChild !ml-10 relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 mb-60 !mr-10 bg-newsletterSection dark:bg-newsletterSection-dark'>
                 <GridChild childId={31} 
                     childName="harpreetCollab"
                     customHeaderCss='font-bold'
@@ -130,7 +133,7 @@ export default function Home() {
                 />
                 <div className='patternPosition max709px:hidden'><img src={leafPattern.src} alt=""></img></div>
         </div>
-        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10'>
+        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10 bg-newsletterSection dark:bg-newsletterSection-dark'>
                 <GridChild childId={31} 
                     childName="harpreetCollab"
                     customHeaderCss='font-bold'
@@ -148,7 +151,7 @@ export default function Home() {
                 />
                 <div className='patternPosition max709px:hidden'><img src={leafPattern.src} alt=""></img></div>
         </div>
-        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10'>
+        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10 bg-newsletterSection dark:bg-newsletterSection-dark'>
                 <GridChild childId={31} 
                     childName="harpreetCollab"
                     customHeaderCss='font-bold'
@@ -166,7 +169,7 @@ export default function Home() {
                 />
                 <div className='patternPosition max709px:hidden'><img src={leafPattern.src} alt=""></img></div>
         </div>
-        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10'>
+        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10 bg-newsletterSection dark:bg-newsletterSection-dark'>
                 <GridChild childId={31} 
                     childName="harpreetCollab"
                     customHeaderCss='font-bold'
@@ -184,7 +187,7 @@ export default function Home() {
                 />
                 <div className='patternPosition max709px:hidden'><img src={leafPattern.src} alt=""></img></div>
         </div>
-        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10'>
+        <div className='testimonialChild relative overflow-hidden flex flex-col gap-y-4 align-center justify-center text-center m-auto my-16 p-20 testimonialColor mb-60 !mr-10 bg-newsletterSection dark:bg-newsletterSection-dark'>
                 <GridChild childId={31} 
                     childName="harpreetCollab"
                     customHeaderCss='font-bold'
@@ -208,7 +211,7 @@ export default function Home() {
 
     {/* I'm Your Certified Professional */}
     <section className='certifiedProfessionalSection m-auto w-full mb-40'>
-        <div className='sectionBackgroundCP absolute overflow-visible w-full h-full'>
+        <div className='sectionBackgroundCP absolute overflow-visible w-full h-full bg-backgroundCertificationSection dark:bg-backgroundCertificationSection-dark'>
             <div className='certifiedPatternContainerTop'><img className='certifiedPatternImg' src={certifiedPattern.src} /></div>
             <div className='certifiedPatternContainerBottom'><img className='certifiedPatternImg' src={certifiedPattern.src} /></div>
         </div>
@@ -243,7 +246,7 @@ export default function Home() {
 
     {/* Writings by Harpreet */}
     <section className='m-auto w-full max-parent-grid-container-width pt-60 pb-10 relative'>
-        <GridContainer gridCols="grid-cols-1 textGradientBefore">
+        <GridContainer gridCols="grid-cols-1 textGradientBefore after:!bg-gradient-linear-light after:dark:!bg-gradient-linear-dark">
             <GridChild childId={8} 
                 childName="writingsByHarpreet"
                 customHeaderCss='font-bold'
@@ -256,10 +259,10 @@ export default function Home() {
         <GridContainer gridCols="grid-cols-4 min1280px:grid-rows-6 lgTablet:grid-cols-2 max990px:grid-cols-1">
             <div className='min1280px:grid flex flex-col cloudComputing w-full row-start-1 row-span-6 max1279px:auto-rows-auto max1279px:row-span-1 items-start content-start overflow-scroll'>
                 <a href='https://harpreetwasu.com' className='w-full py-5 items-center text-center'>
-                    <h4 className='text-h4'>Cloud Computing</h4>
+                    <h4 className={`text-h4`}>Cloud Computing</h4>
                 </a>
                 <GridChild childId={9} 
-                    childName="cloudComputingSection h-full !justify-start"
+                    childName="cloudComputingSection dark:bg-blogs-cloudComputing-dark bg-blogs-cloudComputing h-full !justify-start"
                 />
             </div>
             <div className='min1280px:grid flex flex-col microsoft365 row-start-1 row-span-4 max1279px:row-start-auto max1279px:row-span-1 items-start content-start w-full overflow-scroll'>
@@ -267,7 +270,7 @@ export default function Home() {
                     <h4 className='text-h4'>Microsoft 365</h4>
                 </a>
                 <GridChild childId={10} 
-                    childName="microsoft365Section h-full !justify-start"
+                    childName="microsoft365Section bg-blogs-microsoft365 dark:bg-blogs-microsoft365-dark h-full !justify-start"
                 />
             </div>
             <div className='min1280px:grid flex flex-col cyberSecurity row-start-1 row-span-4 max1279px:row-start-auto max1279px:row-span-1 items-start content-start w-full overflow-scroll'>
@@ -275,7 +278,7 @@ export default function Home() {
                     <h4 className='text-h4'>Cyber Security</h4>
                 </a>
                 <GridChild childId={11} 
-                    childName="cyberSecuritySection h-full !justify-start"
+                    childName="cyberSecuritySection bg-blogs-cyberSecurity dark:bg-blogs-cyberSecurity-dark h-full !justify-start"
                 />
             </div>
             <div className='min1280px:grid flex flex-col migrations row-start-1 row-span-6 max1279px:row-start-auto max1279px:row-span-1 items-start content-start w-full overflow-scroll'>
@@ -283,23 +286,23 @@ export default function Home() {
                     <h4 className='text-h4'>Migrations</h4>
                 </a>
                 <GridChild childId={12} 
-                    childName="migrationsSection h-full !justify-start"
+                    childName="migrationsSection bg-blogs-migrations dark:bg-blogs-migrations-dark h-full !justify-start"
                 />
             </div>
             <div className='min1280px:grid flex flex-col featuredOnSection min1280px:col-start-2 min991px:col-span-2 min1280px:row-start-5 max1279px:row-span-1 row-span-2 w-full overflow-scroll rounded-md'>
                 <p className='pt-4 text-paragraph text-center font-bold'>FEATURED ON</p>
                 <GridChild childId={13} 
-                    childName="featuredOnChild vectorShape scale-75 h-full !justify-start"
+                    childName="featuredOnChild invert-0 brightness-0 dark:invert scale-75 h-full !justify-start"
                 />
             </div>
         </GridContainer>
     </section>
 
     {/* The Harpreet Times */}
-    <section className='newsletterSection m-auto w-full max-parent-grid-container-width min1280px:py-40 py-10 min1280px:px-40 max554px:px-5 min555px:px-10 mb-56 rounded-2xl'>
+    <section className='bg-newsletterSection dark:bg-newsletterSection-dark m-auto w-full max-parent-grid-container-width min1280px:py-40 py-10 min1280px:px-40 max554px:px-5 min555px:px-10 mb-56 rounded-2xl'>
         <GridContainer gridCols="grid-cols-1 mb-8 min1280px:mb-24">
             <GridChild childId={14} 
-                childName="harpreetNewsletters items-center text-center gap-y-8 vectorShape"
+                childName="harpreetNewsletters items-center text-center gap-y-8 invert-0 brightness-0 dark:invert"
                 chipsOrder={1}
                 assetOrder={2}
             />
@@ -312,7 +315,7 @@ export default function Home() {
             <form>
                 <label className="block"></label>
                   <input type="email" name="email" id="email" 
-                        className="formInputCss px-3 py-5 bgColorGlobal textColorGlobal
+                        className="formInputCss px-3 py-5 bg-background text-foreground
                                   shadow-sm placeholder-slate-400 
                                   disabled:bg-slate-50 disabled:text-slate-500 
                                   disabled:border-slate-200 focus:outline-none 
@@ -345,15 +348,15 @@ export default function Home() {
 
     {/* 3 column grid */}
     <section className='m-auto max-parent-grid-container-width harpreetTestimonialsByPeople relative'>
-        <GridContainer gridCols="grid-cols-3 max990px:grid-cols-1 items-end banner bannerHome">
+        <GridContainer gridCols="grid-cols-3 max990px:grid-cols-1 items-end banner bannerHome before:!bg-gradient-linear-light before:dark:!bg-gradient-linear-dark">
             <div className='flex flex-col gap-y-8 pb-28'>
                 <GridChild childId={34}
-                    childName="testimonialTextData"
+                    childName="testimonialTextData bg-blogs-cloudComputing dark:bg-blogs-cloudComputing-dark"
                     paragraphOrder={1}
                     assetOrder={2}
                 />
                 <GridChild childId={35}
-                    childName="testimonialTextData"
+                    childName="testimonialTextData bg-blogs-cloudComputing dark:bg-blogs-cloudComputing-dark"
                     paragraphOrder={1}
                     assetOrder={2}
                 />
@@ -367,12 +370,12 @@ export default function Home() {
             </div>
             <div className='flex flex-col gap-y-8 pb-10'>
                 <GridChild childId={36}
-                    childName="testimonialTextData"
+                    childName="testimonialTextData bg-blogs-cloudComputing dark:bg-blogs-cloudComputing-dark"
                     paragraphOrder={1}
                     assetOrder={2}
                 />
                 <GridChild childId={37}
-                    childName="testimonialTextData"
+                    childName="testimonialTextData bg-blogs-cloudComputing dark:bg-blogs-cloudComputing-dark"
                     paragraphOrder={1}
                     assetOrder={2}
                 />

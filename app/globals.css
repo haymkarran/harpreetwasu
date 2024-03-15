@@ -17,17 +17,6 @@
   --filter-value: brightness(0) invert(0);
   --neutral-white: 255, 255, 255;
   --nav-item-hover-bg: 236,241,246;
-
-  --blogs-cloudComputing: 231, 245, 255;
-  --blogs-microsoft365: 250, 255, 234;
-  --blogs-cyberSecurity: 251, 241, 255;
-  --blogs-migrations: 239, 255, 253;
-
-  --newsletterSection: 251, 241, 255;
-  
-  --backgroundCertificationSection: 206, 255, 249;
-
-  --text-gradient: linear-gradient(196.35deg, #f9f9f9 16.7%, #fdfdfd 82.55%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,17 +35,6 @@
     --filter-value: brightness(0) invert(1);
     --neutral-white: 255, 255, 255;
     --nav-item-hover-bg: 6,14,25;
-
-    --blogs-cloudComputing: 27, 34, 40;
-    --blogs-microsoft365: 56, 59, 41;
-    --blogs-cyberSecurity: 33, 13, 41;
-    --blogs-migrations: 23, 42, 40;
-
-    --newsletterSection: 33, 13, 41;
-
-    --backgroundCertificationSection: 3, 27, 25;
-
-    --text-gradient: linear-gradient(196.35deg, #5B062A 16.7%, #1B023A 82.55%);
   }
 }
 
@@ -64,12 +42,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.2s ease;
+  /* transition: all 0.2s ease; */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
   -webkit-font-smoothing: antialiased;
   margin: 20px 0;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu !important;
@@ -86,6 +62,18 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+.bgInvert {
+  background-color: rgb(var(--foreground-rgb));
+}
+
+.textInvert {
+  background-color: rgb(var(--background-rgb));
+}
+
+/* .textGradient {
+  background: var(--text-gradient);
+} */
+
 .imageContainer {
   width: fit-content;
   height: fit-content;
@@ -95,10 +83,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.vectorShape, .aboutHarpreetFooterMenu .asset img {
-	filter : var(--filter-value);
 }
 
 .filled-button, .sectionHarpreetAvailability {
