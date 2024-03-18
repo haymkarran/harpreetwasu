@@ -174,7 +174,7 @@ const TopNav: React.FC<Props> = () => {
             <div className={`m-auto max-parent-grid-container-width`}>
                 <div className="flex flex-row justify-between items-center">
                     <div className="header-item item-left flex-row">
-                        <div className="mobile-menu-trigger" onClick={toggleMenu}><span /></div>
+                        <div className="mobile-menu-trigger" onClick={toggleMenu}><span className='dark:bg-background before:dark:bg-background after:dark:bg-background' /></div>
                         <div className="logo">
                             <Link href="/">
                             <div
@@ -208,30 +208,30 @@ const TopNav: React.FC<Props> = () => {
                                 <a href="#">
                                 Services <span className="menu-nav-arrow bold">↓</span>
                                 </a>
-                                <div className="sub-menu p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-4 divide-gray-300 dark:divide-gray-800 max-parent-grid-container-width bg-background dark:!bg-foreground/90 backdrop-blur-md">
+                                <div className="sub-menu p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y divide-[#fae8ff] dark:divide-[#B100C0]/50 grid-cols-4 max-parent-grid-container-width bg-background dark:!bg-foreground backdrop-blur-md">
                                     {servicesMenuData && servicesMenuData.map((currentElement) => (
                                         <ul className='' key={currentElement.id}>
                                             <p className="text-xl p-6 font-bold h-16">{currentElement.CatagoryTitle}</p>
                                             {currentElement.heroImageSrc &&
                                                 <Link href={currentElement.heroContentLink}>
-                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52 bg-gray-200 dark:bg-gray-900'>
+                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52'>
                                                         <img className='w-full h-full object-contain scale-110 hover:scale-125 !transition' src={currentElement.heroImageSrc} alt='' />
                                                     </div>
                                                 </Link>
                                             }
 
                                             {currentElement.Contents && currentElement.Contents.map((contentsData) => (
-                                                <li className='p-4 hover:bg-slate-100 dark:hover:bg-neutral-900 min710px:m-2 rounded-lg submenu-nav-item' key={contentsData.id}>
+                                                <li className='p-4 min710px:m-2 rounded-lg submenu-nav-item group' key={contentsData.id}>
                                                     <Link href={contentsData.contentLink} target="_blank">
                                                     {contentsData.titleText ? (
                                                         <div className='flex flex-row gap-x-4 items-start'>
                                                             {contentsData.imageSrc && (
-                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 bg-gray-200 border border-gray-200 dark:bg-gray-900 dark:border-gray-800 imageSrc-container'>
+                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:group-hover:bg-[#2c0230]'>
                                                                     {contentsData.imageSrc && <img className='place-self-center w-fit h-fit imageSrc' src={contentsData.imageSrc} alt='' />}
                                                                 </div>
                                                             )}
                                                             {contentsData.videoSrcImage && (
-                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 bg-gray-200 relative border border-gray-200 dark:bg-gray-900 dark:border-gray-800'>
+                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 relative'>
                                                                     {contentsData.videoSrcImage && 
                                                                         <img className='w-full h-full object-cover' src={contentsData.videoSrcImage as string} alt='' />
                                                                     }
@@ -249,7 +249,7 @@ const TopNav: React.FC<Props> = () => {
                                                         </div>
                                                         ) : (
                                                         <div className='grid grid-cols-1 gap-2'>
-                                                            <div className='flex-none rounded-md w-full h-40 bg-gray-200 dark:bg-gray-900 imageSrc-container'>
+                                                            <div className='flex-none rounded-md w-full h-40 imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:hover:bg-[#2c0230]'>
                                                             {contentsData.imageSrc && <img className='w-full h-full p-4 object-contain scale-75' src={contentsData.imageSrc} alt='' />}
                                                             </div>
                                                         </div>
@@ -266,29 +266,29 @@ const TopNav: React.FC<Props> = () => {
                                 <a href="#">
                                 Resource Hub <span className="menu-nav-arrow bold">↓</span>
                                 </a>
-                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-4 divide-gray-300 dark:divide-gray-800 max-parent-grid-container-width bg-background dark:!bg-foreground/90 backdrop-blur-md">
+                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-4 divide-[#fae8ff] dark:divide-[#B100C0]/50 dark:divide-gray-800 max-parent-grid-container-width bg-background dark:!bg-foreground backdrop-blur-md">
                                     {resourcesHubMenuData && resourcesHubMenuData.map((currentElement) => (
                                         <ul className='' key={currentElement.id}>
                                             <p className="text-xl p-6 font-bold h-16">{currentElement.CatagoryTitle}</p>
                                             {currentElement.heroImageSrc && 
                                                 <Link href={currentElement.heroContentLink}>
-                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52 bg-gray-200 dark:bg-gray-900'>
+                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52'>
                                                         <img className='w-full h-full object-contain scale-110 hover:scale-125 !transition' src={currentElement.heroImageSrc} alt='' />
                                                     </div>
                                                 </Link>
                                             }
                                             {currentElement.Contents && currentElement.Contents.map((contentsData) => (
-                                                <li className='p-4 active:font-bold hover:bg-slate-100 dark:hover:bg-neutral-900 min710px:m-2 rounded-lg submenu-nav-item' key={contentsData.id}>
+                                                <li className='p-4 active:font-bold min710px:m-2 rounded-lg submenu-nav-item group' key={contentsData.id}>
                                                     <Link href={contentsData.contentLink} target="_blank">
                                                     {contentsData.titleText ? (
                                                         <div className='flex flex-row gap-x-4 items-start'>
                                                             {contentsData.imageSrc && (
-                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 bg-gray-200 border border-gray-200 dark:bg-gray-900 dark:border-gray-800 imageSrc-container'>
+                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 imageSrc-container'>
                                                                     {contentsData.imageSrc && <img className='place-self-center w-fit h-fit imageSrc' src={contentsData.imageSrc} alt='' />}
                                                                 </div>
                                                             )}
                                                             {contentsData.videoSrcImage && (
-                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 bg-gray-200 relative border border-gray-200 dark:bg-gray-900 dark:border-gray-800'>
+                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 relative'>
                                                                     {contentsData.videoSrcImage && 
                                                                         <img className='w-full h-full object-cover' src={contentsData.videoSrcImage as string} alt='' />
                                                                     }
@@ -306,7 +306,7 @@ const TopNav: React.FC<Props> = () => {
                                                         </div>
                                                         ) : (
                                                         <div className='grid grid-cols-1 gap-2'>
-                                                            <div className='flex-none rounded-md w-full h-40 bg-gray-200 dark:bg-gray-900'>
+                                                            <div className='flex-none rounded-md w-full h-40'>
                                                             {contentsData.imageSrc && <img className='w-full h-full p-4 object-contain' src={contentsData.imageSrc} alt='' />}
                                                             </div>
                                                         </div>
@@ -323,7 +323,7 @@ const TopNav: React.FC<Props> = () => {
                                 <a href="#">
                                 Testimonials <span className="menu-nav-arrow bold">↓</span>
                                 </a>
-                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-2 divide-gray-300 dark:divide-gray-900 max-parent-grid-container-width bg-background dark:!bg-foreground/90 backdrop-blur-md">
+                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y divide-[#fae8ff] dark:divide-[#B100C0]/50 grid-cols-2 max-parent-grid-container-width bg-background dark:!bg-foreground backdrop-blur-md">
                                     {testimonialsMenuData && testimonialsMenuData.map((currentElement) => (
                                         <ul className='' key={currentElement.id}>
                                             {currentElement.CatagoryTitle && <p className="text-h4 p-6 font-bold">{currentElement.CatagoryTitle}</p>}
@@ -339,11 +339,11 @@ const TopNav: React.FC<Props> = () => {
                                             {currentElement.Contents && currentElement.Contents.map((contentsData) => (
                                                 <li className='p-4 min710px:m-2 rounded-lg submenu-nav-item' key={contentsData.id}>
                                                 {contentsData.personDetails ? (
-                                                    <div className='flex flex-col gap-4 border p-4 rounded-xl items-start hover:bg-gray-200 dark:hover:bg-gray-900 bg-transparent dark:border-gray-900 border-gray-200'>
+                                                    <div className='flex flex-col gap-4 border border-[#fae8ff] dark:border-[#B100C0]/30 p-4 rounded-xl items-start bg-transparent'>
                                                         <div className='flex flex-row flex-wrap items-start w-full items-center gap-2'>
                                                             {contentsData.testimonialTagsData && contentsData.testimonialTagsData.map((tagsData) => (
                                                                 tagsData.tag && 
-                                                                    <Link href={tagsData.tagLink} target="_blank" key={tagsData.id} className='py-2 px-4 !h-auto !w-max hover:dark:bg-black rounded dark:bg-slate-700 dark:border-gray-800'>
+                                                                    <Link href={tagsData.tagLink} target="_blank" key={tagsData.id} className='py-2 px-4 !h-auto !w-max rounded hover:bg-[#fae8ff] border border-[#fae8ff] dark:border-[#2c0230] dark:bg-[#18011a] dark:hover:bg-[#2c0230]'>
                                                                         <div className='flex whitespace-pre-line text-sm leading-normal items-center align-start'>
                                                                             <span>{tagsData.tag}</span>
                                                                         </div>
@@ -358,7 +358,7 @@ const TopNav: React.FC<Props> = () => {
                                                             </div>
                                                                 {contentsData.personSrc && (
                                                                     <div className='flex flex-row gap-x-4 items-start'>
-                                                                        <div className='grid overflow-hidden rounded-full w-16 h-16 bg-gray-200 border border-gray-200 dark:bg-gray-900 dark:border-gray-800 imageSrc-container'>
+                                                                        <div className='grid overflow-hidden rounded-full w-16 h-16 imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:hover:bg-[#2c0230]'>
                                                                             {contentsData.personSrc && <img className='place-self-center w-fit h-fit' src={contentsData.personSrc} alt={contentsData.personSrcAlt} />}
                                                                         </div>
                                                                         <div className=''>
@@ -390,15 +390,15 @@ const TopNav: React.FC<Props> = () => {
                                 <a href="#">
                                 About <span className="menu-nav-arrow bold">↓</span>
                                 </a>
-                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-2 divide-gray-300 dark:divide-gray-800 max-parent-grid-container-width bg-background dark:!bg-foreground/90 backdrop-blur-md">
+                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto services-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-2 divide-[#fae8ff] dark:divide-[#B100C0]/50 max-parent-grid-container-width bg-background dark:!bg-foreground backdrop-blur-md">
                                     {aboutMenuData && aboutMenuData.map((currentElement) => (
                                         <ul className='' key={currentElement.id}>
                                             {currentElement.CatagoryTitle && <p className="text-xl p-6 font-bold h-14">{currentElement.CatagoryTitle}</p>}
                                             {currentElement.Contents && currentElement.Contents.map((contentsData) => (
-                                                <li className='p-4 active:font-bold hover:bg-slate-100 dark:hover:bg-neutral-900 min710px:m-2 rounded-lg submenu-nav-item' key={contentsData.id}>
+                                                <li className='p-4 active:font-bold min710px:m-2 rounded-lg submenu-nav-item group' key={contentsData.id}>
                                                     <Link href={contentsData.contentLink} target="_blank">
                                                     <div className='grid grid-cols-1 gap-2'>
-                                                        <div className='flex-none rounded-md w-full max1279px:h-40 min1280px:h-96 bg-gray-200 dark:bg-gray-900 mb-4 overflow-hidden imageSrc-container'>
+                                                        <div className='flex-none rounded-md w-full max1279px:h-40 min1280px:h-96 bg-gray-200 mb-4 overflow-hidden imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:group-hover:bg-[#2c0230]'>
                                                             {contentsData.imageSrc && <img className='w-full h-full p-4 object-contain hover:scale-125' src={contentsData.imageSrc} alt='' />}
                                                         </div>
                                                         <div className='mb-2'>
@@ -419,7 +419,7 @@ const TopNav: React.FC<Props> = () => {
                                 <a href="#">
                                 Contact <span className="menu-nav-arrow bold">↓</span>
                                 </a>
-                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto contact-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-4 divide-gray-300 dark:divide-gray-800 max-parent-grid-container-width bg-background dark:!bg-foreground/90 backdrop-blur-md">
+                                <div className="sub-menu max-h-64 overflow-y-auto p-0.5 min-w-fit rounded-2xl grid m-auto contact-menu-nav min1280px:divide-x max1279px:divide-y grid-cols-4 divide-[#fae8ff] dark:divide-[#B100C0]/50 max-parent-grid-container-width bg-background dark:!bg-foreground backdrop-blur-md">
                                     {contactMenuData && contactMenuData.map((currentElement) => (
                                         <ul className='contactMenuUl' key={currentElement.id}>
                                             <p className="inline-flex text-xl p-6 font-bold h-16">{currentElement.CatagoryTitle}
@@ -430,23 +430,23 @@ const TopNav: React.FC<Props> = () => {
                                             </p>
                                             {currentElement.heroImageSrc && 
                                                 <Link href={currentElement.heroContentLink}>
-                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52 bg-gray-200 dark:bg-gray-900'>
+                                                    <div className='m-auto w-11/12 mb-2 rounded-md overflow-hidden h-52 bg-fuchsia-100 dark:bg-[#18011a] dark:hover:bg-[#2c0230]'>
                                                         <img className='w-full h-full object-contain scale-110 hover:scale-125 !transition' src={currentElement.heroImageSrc} alt='' />
                                                     </div>
                                                 </Link>
                                             }
                                             {currentElement.Contents && currentElement.Contents.map((contentsData) => (
-                                                <li className='p-4 active:font-bold hover:bg-slate-100 dark:hover:bg-neutral-900 min710px:m-2 rounded-lg submenu-nav-item' key={contentsData.id}>
+                                                <li className='p-4 active:font-bold min710px:m-2 rounded-lg submenu-nav-item group' key={contentsData.id}>
                                                     <Link href={contentsData.contentLink} target="_blank">
                                                     {contentsData.titleText ? (
                                                         <div className='flex flex-row gap-x-4 items-start'>
                                                             {contentsData.imageSrc && (
-                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 bg-gray-200 border border-gray-200 dark:bg-gray-900 dark:border-gray-800 imageSrc-container'>
+                                                                <div className='grid overflow-hidden rounded-md w-16 h-16 imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:group-hover:bg-[#2c0230]'>
                                                                     {contentsData.imageSrc && <img className='place-self-center w-fit h-fit imageSrc' src={contentsData.imageSrc} alt='' />}
                                                                 </div>
                                                             )}
                                                             {contentsData.videoSrcImage && (
-                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 bg-gray-200 relative border border-gray-200 dark:bg-gray-900 dark:border-gray-800'>
+                                                                <div className='flex-none overflow-hidden rounded-md w-32 h-20 bg-gray-200 relative bg-fuchsia-100 dark:bg-[#18011a] dark:group-hover:bg-[#2c0230]'>
                                                                     {contentsData.videoSrcImage && 
                                                                         <img className='w-full h-full object-cover' src={contentsData.videoSrcImage as string} alt='' />
                                                                     }
@@ -464,7 +464,7 @@ const TopNav: React.FC<Props> = () => {
                                                         </div>
                                                         ) : (
                                                         <div className=''>
-                                                            <div className='flex-none rounded-md w-full h-52 bg-gray-200 dark:bg-gray-900 imageSrc-container'>
+                                                            <div className='flex-none rounded-md w-full h-52 imageSrc-container bg-fuchsia-100 dark:bg-[#18011a] dark:hover:bg-[#2c0230]'>
                                                             {contentsData.imageSrc && <img className='w-full h-full p-4 object-contain scale-75' src={contentsData.imageSrc} alt='' />}
                                                             </div>
                                                         </div>
@@ -483,7 +483,7 @@ const TopNav: React.FC<Props> = () => {
                             <li className="menu-item-has-children">
                                 <Link href="/contact-us"><button
                                     type="button"
-                                    className="filled-button cursor-pointer flex h-2 justify-center items-center gap-2 rounded-3xl px-6 py-5 hover:py-7"
+                                    className="filled-button light btn-animate cursor-pointer flex h-2 justify-center items-center gap-2 rounded-3xl px-6 py-5 hover:py-7"
                                 >
                                     Hire Harpreet
                                 </button></Link>

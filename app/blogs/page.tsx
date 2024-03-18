@@ -13,9 +13,10 @@ const BlogList: React.FC = () => {
     // Function to fetch blogs from API
     const fetchBlogs = async () => {
       try {
-        const response = await fetch(`https://www.harpreetwasu.com/backend/api.php?action=fetchArticles`);
+        const response = await fetch(`http:/harpreetwasu.com/backend/api.php?action=fetchArticles`);
         const data = await response.json();
         setBlogs(data);
+        console.log("Number of articles fetched:", data.length);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching blogs:', error);

@@ -39,10 +39,6 @@ header .lg-screen-btn {
 	transition: 0.2s ease;
 }
 
-.submenu-nav-item:hover .imageSrc-container {
-	background-color: rgb(var(--nav-item-hover-bg));
-}
-
 .submenu-nav-item:hover .playButton {
 	scale: 1.1;
 	transform: translate(-45%, -45%);
@@ -346,7 +342,7 @@ header .mobile-menu-trigger{
 		height: 2px;
 		width: 24px;
 		position: relative;
-		background: rgb(var(--foreground-rgb));
+		background: rgb(var(--background-rgb));
 	}
 	.header .mobile-menu-trigger span:before,
 	.header .mobile-menu-trigger span:after{
@@ -355,7 +351,7 @@ header .mobile-menu-trigger{
 		left:0;
 		width: 100%;
 		height: 100%;
-		background: rgb(var(--foreground-rgb));
+		background: rgb(var(--background-rgb));
 	}
 	.header .mobile-menu-trigger span:before{
 		top:-6px;

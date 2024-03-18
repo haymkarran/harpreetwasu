@@ -16,7 +16,6 @@
   --mobile-menu-bg: 239, 239, 239;
   --filter-value: brightness(0) invert(0);
   --neutral-white: 255, 255, 255;
-  --nav-item-hover-bg: 236,241,246;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +33,6 @@
     --mobile-menu-bg: 18, 18, 18;
     --filter-value: brightness(0) invert(1);
     --neutral-white: 255, 255, 255;
-    --nav-item-hover-bg: 6,14,25;
   }
 }
 
