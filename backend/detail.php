@@ -3,6 +3,9 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET');
 
+$slugFromUrl = $_GET['slug'];
+
+
 function timeAgo($date) {
     $now = new DateTime();
     $publishedDate = new DateTime($date);
@@ -28,7 +31,7 @@ function createSlug($string) {
 }
 
 
-function fetchArticles() {
+function fetchDetailArticles($slugFromUrl) {
     $rss_feed = simplexml_load_file('https://medium.com/@harpreetwasu/feed'); // Replace the URL with your desired RSS feed
     $articles = [];
 
@@ -49,30 +52,30 @@ function fetchArticles() {
                 $content = $description;
 				$readingTime = '';
             }
+			$slugVal = createSlug($article->title);
 
             $categories = [];
             foreach ($article->category as $category) {
                 $categories[] = (string)$category;
             }
 			$status = stripos($content, 'Continue reading on') !== false ? 'Premium' : 'Free';
-			
+			if(strtolower($slugVal) === strtolower($_GET['slug'])){
+				$articleData = [
+					'title' => (string)$article->title,
+					'slug' => createSlug($article->title),
+					'link' => (string)$article->link,
+					'pubDate' => (string)$article->pubDate,
+					'pubAgo' => timeAgo($article->pubDate),
+					'content' => $content,
+					'authorName' => (string)$article->children('dc', true)->creator,
+					'thumbnailImage' => $firstImage,
+					'categories' => $categories,
+					'status' => $status,
+					'readingTime' => $readingTime,
+				];
 
-
-			$articleData = [
-				'title' => (string)$article->title,
-				'slug' => createSlug($article->title),
-				'link' => (string)$article->link,
-				'pubDate' => (string)$article->pubDate,
-				'pubAgo' => timeAgo($article->pubDate),
-				'content' => $content,
-				'authorName' => (string)$article->children('dc', true)->creator,
-				'thumbnailImage' => $firstImage,
-				'categories' => $categories,
-				'status' => $status,
-				'readingTime' => $readingTime,
-			];
-
-			array_push($articles, $articleData);
+				array_push($articles, $articleData);
+			}
         }
     }
 
@@ -81,8 +84,8 @@ function fetchArticles() {
 
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'fetchArticles') {
-    echo json_encode(fetchArticles());
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['slug']) && isset($_GET['action']) && $_GET['action'] === 'fetchDetailArticles') {
+    echo json_encode(fetchDetailArticles($_GET['slug']));
     exit();
 }
 

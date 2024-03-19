@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
          <section className='m-auto w-full max-parent-grid-container-width pt-30 pb-20 relative'>
-            <GridContainer gridCols={`grid-cols-6 justify-between align-start items-start max1279px:grid-cols-2 max709px:!grid-cols-1 banner bannerHome before:!bg-gradient-linear-light before:dark:!bg-gradient-linear-dark`}>
+            <GridContainer gridCols={`grid-cols-5 justify-between align-start items-start max1279px:grid-cols-2 max709px:!grid-cols-1 banner bannerHome before:!bg-gradient-linear-light before:dark:!bg-gradient-linear-dark`}>
                 <div>
                     <GridChild childId={17} 
                         childName="aboutHarpreetFooterMenu col-span-2 invert-0 brightness-0 dark:invert"
@@ -55,7 +55,7 @@ const Footer = () => {
                 />
                 <div className='footer-footnotes flex flex-row gap-x-2 m-auto'><span>Designed with </span><img src={heartImage.src}></img><span>by <b>Grow With Design</b></span></div>
                 <GridChild childId={40} 
-                    childName="!flex !flex-row gap-x-8 privacy-legal-tc footer-footnotes items-right justify-right"
+                    childName="w-full !inline-flex !flex-nowrap !flex-row gap-x-8 footer-footnotes privacy-legal-tc items-right justify-right"
                     paragraphOrder={1}
                 />
             </GridContainer>

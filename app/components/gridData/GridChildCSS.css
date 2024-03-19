@@ -246,5 +246,11 @@
 }
 
 .privacy-legal-tc {
+  display: flex !important;
   flex-direction: row !important;
+  flex-wrap: wrap !important;
+}
+
+.privacy-legal-tc div, .privacy-legal-tc p {
+  width: max-content !important;
 }

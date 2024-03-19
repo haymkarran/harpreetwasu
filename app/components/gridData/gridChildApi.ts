@@ -979,7 +979,7 @@ const GridChildApi = [
             },
             {
                 "id": 3,
-                "paraData": "Terms & Conditions",
+                "paraData": "T&C",
                 "paraLink": "",
             },
         ],
